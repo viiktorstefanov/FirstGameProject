@@ -80,7 +80,10 @@ function gameLoop(state, game, timestamp) {
     
 
     if(state.gameOver) {
-        alert(`Game Over - your result is: ${state.score} points!`)
+        alert(`Game Over - your result is: ${state.score} points!`);
+        setTimeout(function() { window.location.reload(); }, 0);
+        
+        
     } else {
         window.requestAnimationFrame(gameLoop.bind(null, state, game))
     }
