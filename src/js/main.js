@@ -7,9 +7,15 @@ let state = initState();
         'KeyD',
         'KeyW',
         'Space',
+        'ArrowLeft',
+        'ArrowRight',
+        'ArrowUp',
+        'ArrowDown',
+        
     ];
 
     document.addEventListener('keydown', (e) => {
+        
         if(avalibleKeys.includes(e.code)) {
             state.keys[e.code] = true;
         }

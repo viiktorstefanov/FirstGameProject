@@ -27,7 +27,10 @@ function initState() {
             KeyD: false,
             KeyW: false,
             Space: false,
-            
+            ArrowLeft: false,
+            ArrowRight: false,
+            ArrowUp: false,
+            ArrowDown: false,
             
         },
         
