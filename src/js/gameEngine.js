@@ -14,7 +14,12 @@ function gameLoop(state, game, timestamp) {
     if(state.keys.Space) {
         game.wizardElement.style.backgroundImage = 'url("/images/wizard-fire.png")'
 
-        game.createFireball(wizard, state.fireball);
+        if(timestamp > state.fireball.nextSpawnTimestamp) {
+            game.createFireball(wizard, state.fireball);
+            state.fireball.nextSpawnTimestamp = timestamp + state.fireball.fireRate;
+        }
+
+        
     } else {
         game.wizardElement.style.backgroundImage = 'url("/images/wizard.png")'
     }
@@ -23,7 +28,7 @@ function gameLoop(state, game, timestamp) {
   
     if(timestamp > state.bugStats.nextSpawnTimestamp) {
         game.createBug(state.bugStats);
-        state.bugStats.nextSpawnTimestamp = timestamp + Math.random() * state.bugStats.maxSpawnInterval
+        state.bugStats.nextSpawnTimestamp = timestamp + state.fireball.fireRate;
     }
 
     // Render  bugs
