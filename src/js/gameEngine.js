@@ -32,7 +32,7 @@ function gameLoop(state, game, timestamp) {
         game.createBug(state.bugStats);
         state.bugStats.nextSpawnTimestamp = timestamp + state.fireball.fireRate;
     }
-
+    
     // Render  bugs
     let bugElements = document.querySelectorAll('.bug');
     bugElements.forEach(bug => {
@@ -61,6 +61,21 @@ function gameLoop(state, game, timestamp) {
                 state.score += state.killScore;
                 bug.remove();
                 fireball.remove();
+                if(state.score > 200) {
+                    state.bugStats.speed = 7;
+                }
+                if(state.score > 400) {
+                    state.bugStats.speed = 9;
+                }
+                if(state.score > 600) {
+                    state.bugStats.speed = 11;
+                }
+                if(state.score > 800) {
+                    state.bugStats.speed = 13;
+                }
+                if(state.score > 1000) {
+                    state.bugStats.speed = 15;
+                }
             }
         });
 
