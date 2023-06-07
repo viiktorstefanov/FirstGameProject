@@ -18,9 +18,19 @@ function gameLoop(state, game, timestamp) {
         state.bugStats.nextSpawnTimestamp = timestamp + Math.random() * state.bugStats.maxSpawnInterval
     }
 
-    // Render
+    // Render  bugs
+    document.querySelectorAll('.bug').forEach(bug => {
+        let positionX = parseInt(bug.style.left);
+
+        bug.style.left = positionX - state.bugStats.speed + 'px';
+    })
+    
+    
+    // Render wizard
     wizardElement.style.left = wizard.positionX + 'px';
     wizardElement.style.top = wizard.positionY + 'px';
+    
+
 
     window.requestAnimationFrame(gameLoop.bind(null, state, game))
 }
