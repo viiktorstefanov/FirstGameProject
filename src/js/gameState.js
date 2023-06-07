@@ -5,6 +5,9 @@ function initState() {
     const state = {
         player: 'Viktor',
         gameOver: false,
+        score: 0,
+        scoreRate: 1,
+        killScore: 5,
         wizard: {
             width: 82,
             height: 100,
@@ -22,7 +25,7 @@ function initState() {
         fireball: {
             width: 20,
             height: 20,
-            speed: 12,
+            speed: 20,
             nextSpawnTimestamp: 0,
             fireRate: 500,
 

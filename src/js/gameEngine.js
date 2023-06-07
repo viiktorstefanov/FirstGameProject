@@ -9,6 +9,8 @@ function gameLoop(state, game, timestamp) {
     const { wizard } = state;
     const { wizardElement } = game;
 
+    game.scoreElement.textContent = `current points: ${state.score}`
+
     modifyWizardPosition(state, game);
 
     if(state.keys.Space) {
@@ -56,6 +58,7 @@ function gameLoop(state, game, timestamp) {
         // Detect collision
         bugElements.forEach(bug => {
             if(detectCollision(bug,fireball)) {
+                state.score += state.killScore;
                 bug.remove();
                 fireball.remove();
             }
@@ -77,7 +80,7 @@ function gameLoop(state, game, timestamp) {
     
 
     if(state.gameOver) {
-        alert('Game Over')
+        alert(`Game Over - your result is: ${state.score} points!`)
     } else {
         window.requestAnimationFrame(gameLoop.bind(null, state, game))
     }

@@ -32,6 +32,12 @@ body {
 .hidden {
     display: none;
 }
+.score {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    font-size: 20px;
+}
 .wizard {
     position: absolute;
     background-image: url('/images/wizard.png');
