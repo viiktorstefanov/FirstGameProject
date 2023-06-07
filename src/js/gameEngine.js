@@ -36,6 +36,11 @@ function gameLoop(state, game, timestamp) {
     bugElements.forEach(bug => {
         let positionX = parseInt(bug.style.left);
 
+        // Detect collison with wizard
+        if(detectCollision(wizardElement, bug)) {
+            state.gameOver = true;
+        }
+
         if(positionX > 0) {
             bug.style.left = positionX - state.bugStats.speed + 'px';
         }else {
@@ -71,8 +76,12 @@ function gameLoop(state, game, timestamp) {
     wizardElement.style.top = wizard.positionY + 'px';
     
 
-
-    window.requestAnimationFrame(gameLoop.bind(null, state, game))
+    if(state.gameOver) {
+        alert('Game Over')
+    } else {
+        window.requestAnimationFrame(gameLoop.bind(null, state, game))
+    }
+    
 }
 
 function modifyWizardPosition(state, game) {
