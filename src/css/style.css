@@ -1,6 +1,7 @@
 body {
     margin: 0;
-    font-family: 'Consolas'
+    font-family: 'Consolas';
+    overflow: hidden;
 }
 
 .game {
@@ -45,4 +46,5 @@ body {
     width: 100%;
     height: 100%;
     background-color: aqua;
+    
 }

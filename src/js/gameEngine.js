@@ -38,7 +38,19 @@ function gameLoop(state, game, timestamp) {
 
         
     })
-    
+    // Render fireballs
+    document.querySelectorAll('.fireball').forEach(fireball => {
+        let positionX = parseInt(fireball.style.left);
+
+        if(positionX > game.gameScreen.offsetWidth) {
+            fireball.remove();
+        } else {
+            fireball.style.left = positionX + state.fireball.speed + 'px';
+        }
+
+        
+    })
+
     
     // Render wizard
     wizardElement.style.left = wizard.positionX + 'px';
