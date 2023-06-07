@@ -23,17 +23,22 @@ body {
     background-color: green;
     cursor: pointer;
 }
+.fireball {
+    position: absolute;
+    background-image: url("/images/fire-ball.png");
+    background-size: cover;
+}
 .hidden {
     display: none;
 }
 .wizard {
     position: absolute;
-    background-image: url('/src/images/wizard.png');
+    background-image: url('/images/wizard.png');
     background-size: cover;
 }
 .bug {
     position: absolute;
-    background-image: url("/src/images/bug.png");
+    background-image: url("/images/bug.png");
     background-size: cover;
 }
 .game-screen {
