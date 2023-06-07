@@ -11,18 +11,39 @@ body {
 }
 .start-screen {
     font-size: 48px;
-    width: 500px;
-    background-color: lightgreen;
+    width: 200px;
+    height: 200px;
+    background-color: black;
+    border-radius: 100%;
+    text-align: center;
+    align-items: center;
+    color: lightblue;
+    position: absolute;
+    left: 50%;
+    top: 30%;   
+    transform: translate(-50%);
+    text-align: center;
+    padding: 30px;
+    cursor:crosshair;
+    margin: auto;
+}
+.start-screen:hover {
+    font-size: 48px;
+    width: 200px;
+    height: 200px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 100%;
+    text-align: center;
+    align-items: center;
+    color: lightblue;
     position: absolute;
     left: 50%;
     top: 30%;
     transform: translate(-50%);
     text-align: center;
     padding: 30px;
-}
-.start-screen:hover {
-    background-color: green;
-    cursor: pointer;
+    cursor:crosshair;
+    margin: auto;
 }
 .fireball {
     position: absolute;
@@ -51,6 +72,6 @@ body {
 .game-screen {
     width: 100%;
     height: 100%;
-    background-color: aqua;
+    background-color: lightblue;
     
 }
