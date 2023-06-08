@@ -85,27 +85,35 @@ function gameLoop(state, game, timestamp) {
                 fireball.remove();
                 if(state.score > 200) {
                     state.bugStats.speed = 6.1;
+                    state.fireball.fireRate = 330;
                 }
                 if(state.score > 400) {
                     state.bugStats.speed = 6.9;
+                    state.fireball.fireRate = 310;
                 }
                 if(state.score > 600) {
                     state.bugStats.speed = 7.5;
+                    state.fireball.fireRate = 300;
                 }
                 if(state.score > 800) {
                     state.bugStats.speed = 8;
+                    state.fireball.fireRate = 290;
                 }
                 if(state.score > 1000) {
                     state.bugStats.speed = 9;
+                    state.fireball.fireRate = 280;
                 }
                 if(state.score > 1200) {
                     state.bugStats.speed = 10;
+                    state.fireball.fireRate = 270;
                 }
                 if(state.score > 1500) {
                     state.bugStats.speed = 11;
+                    state.fireball.fireRate = 250;
                 }
                 if(state.score > 2000) {
                     state.bugStats.speed = 12;
+                    state.fireball.fireRate = 200;
                 }
             }
         });

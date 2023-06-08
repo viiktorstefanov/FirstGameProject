@@ -7,7 +7,7 @@ function initState() {
         gameOver: false,
         score: 0,
         scoreRate: 1,
-        killScore: 5,
+        killScore: 10,
         wizard: {
             width: 82,
             height: 100,
