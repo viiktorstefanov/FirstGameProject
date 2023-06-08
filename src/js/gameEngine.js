@@ -26,6 +26,17 @@ function gameLoop(state, game, timestamp) {
         game.wizardElement.style.backgroundImage = 'url("/images/wizard.png")'
     }
     
+    // Spawn cloud
+
+    if(timestamp - state.scene.lastCloudSpawn > state.scene.cloudSpawnInterval + 20000 * Math.random()) {
+        game.createCloud(state.scene);
+        state.scene.lastCloudSpawn = timestamp;
+    }
+        
+       
+    
+
+
     // Spawn bugs
   
     if(timestamp > state.bugStats.nextSpawnTimestamp) {
@@ -33,6 +44,17 @@ function gameLoop(state, game, timestamp) {
         state.bugStats.nextSpawnTimestamp = timestamp + state.fireball.fireRate;
     }
     
+    // Render clouds
+    let cloudsElement = document.querySelectorAll('.cloud');
+    cloudsElement.forEach(cloud => {
+        cloud.x -= wizard.speed;
+        cloud.style.left = cloud.x + 'px';
+
+        if(cloud.x + cloudsElement.offsetWidth <= 0) {
+            cloud.parentElement.removeChild(cloud);
+        }
+    })
+
     // Render  bugs
     let bugElements = document.querySelectorAll('.bug');
     bugElements.forEach(bug => {
@@ -62,19 +84,19 @@ function gameLoop(state, game, timestamp) {
                 bug.remove();
                 fireball.remove();
                 if(state.score > 200) {
-                    state.bugStats.speed = 7;
+                    state.bugStats.speed = 6.1;
                 }
                 if(state.score > 400) {
-                    state.bugStats.speed = 9;
+                    state.bugStats.speed = 6.9;
                 }
                 if(state.score > 600) {
-                    state.bugStats.speed = 11;
+                    state.bugStats.speed = 7.5;
                 }
                 if(state.score > 800) {
-                    state.bugStats.speed = 13;
+                    state.bugStats.speed = 8;
                 }
                 if(state.score > 1000) {
-                    state.bugStats.speed = 15;
+                    state.bugStats.speed = 8.5;
                 }
             }
         });

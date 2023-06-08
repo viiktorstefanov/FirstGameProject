@@ -7,7 +7,7 @@ function initState() {
         gameOver: false,
         score: 0,
         scoreRate: 1,
-        killScore: 5,
+        killScore: 100,
         wizard: {
             width: 82,
             height: 100,
@@ -21,6 +21,16 @@ function initState() {
             nextSpawnTimestamp: 0,
             maxSpawnInterval: 1500,
             speed: 5,
+        },
+        scene: {
+            lastCloudSpawn: 0,
+            score: 0,
+            cloudSpawnInterval: 500,
+            cloudWidth: 200,
+            cloudHeight: 200,
+
+
+
         },
         fireball: {
             width: 20,

@@ -41,6 +41,18 @@ function initGameObjects () {
             bugElement.style.top = Math.floor(Math.random() * (gameScreen.offsetHeight - stats.height)) + 'px';
 
             gameScreen.appendChild(bugElement);
+        },
+        createCloud(scene) {
+            let cloudElement = document.createElement('div');
+            cloudElement.classList.add('cloud');
+            cloudElement.style.height = scene.cloudHeight + 'px';
+            cloudElement.style.width = scene.cloudWidth + 'px';
+            cloudElement.x = gameScreen.offsetWidth - 200;
+            cloudElement.style.left = cloudElement.x + 'px';
+            cloudElement.style.top = (gameScreen.offsetHeight - 200) * Math.random() + 'px';
+
+            gameScreen.appendChild(cloudElement);
+
         }
     }
 }

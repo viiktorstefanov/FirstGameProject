@@ -5,7 +5,9 @@ body {
 }
 
 .game {
-    background-color: lightblue;
+    
+    background: rgb(22,176,179);
+    background: radial-gradient(circle, rgba(22,176,179,1) 0%, rgba(0,212,255,1) 100%, rgba(114,215,235,0.7665441176470589) 100%);
     width: 100vw;
     height: 100vh;
 }
@@ -17,7 +19,8 @@ body {
     border-radius: 100%;
     text-align: center;
     align-items: center;
-    color: lightblue;
+    color: rgb(22,176,179);
+    color: radial-gradient(circle, rgba(22,176,179,1) 0%, rgba(0,212,255,1) 100%, rgba(114,215,235,0.7665441176470589) 100%);
     position: absolute;
     left: 50%;
     top: 30%;   
@@ -50,6 +53,12 @@ body {
     background-image: url("/images/fire-ball.png");
     background-size: cover;
 }
+.cloud {
+    position: absolute;
+    z-index: 0;
+    background-image: url(/images/cloud.png);
+    background-size: cover;
+}
 .hidden {
     display: none;
 }
@@ -63,6 +72,7 @@ body {
     position: absolute;
     background-image: url('/images/wizard.png');
     background-size: cover;
+    z-index: 100;
 }
 .bug {
     position: absolute;
@@ -72,6 +82,6 @@ body {
 .game-screen {
     width: 100%;
     height: 100%;
-    background-color: lightblue;
-    
+    background: rgb(22,176,179);
+    background: radial-gradient(circle, rgba(22,176,179,1) 0%, rgba(0,212,255,1) 100%, rgba(114,215,235,0.7665441176470589) 100%);
 }
