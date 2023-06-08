@@ -14,7 +14,7 @@ function gameLoop(state, game, timestamp) {
     modifyWizardPosition(state, game);
 
     if(state.keys.Space) {
-        game.wizardElement.style.backgroundImage = 'url("/images/wizard-fire.png")'
+        game.wizardElement.style.backgroundImage = 'url("/src/images/wizard-fire.png")'
 
         if(timestamp > state.fireball.nextSpawnTimestamp) {
             game.createFireball(wizard, state.fireball);
@@ -23,7 +23,7 @@ function gameLoop(state, game, timestamp) {
 
         
     } else {
-        game.wizardElement.style.backgroundImage = 'url("/images/wizard.png")'
+        game.wizardElement.style.backgroundImage = 'url("/src/images/wizard.png")'
     }
     
     // Spawn cloud
