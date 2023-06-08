@@ -96,7 +96,16 @@ function gameLoop(state, game, timestamp) {
                     state.bugStats.speed = 8;
                 }
                 if(state.score > 1000) {
-                    state.bugStats.speed = 8.5;
+                    state.bugStats.speed = 9;
+                }
+                if(state.score > 1200) {
+                    state.bugStats.speed = 10;
+                }
+                if(state.score > 1500) {
+                    state.bugStats.speed = 11;
+                }
+                if(state.score > 2000) {
+                    state.bugStats.speed = 12;
                 }
             }
         });
