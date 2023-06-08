@@ -14,5 +14,3 @@
   <p>When you got above 1500 points - bug and fire speed increased.</p>
   <p>When you got above 2000 points - bug and fire speed increased.</p>
 
-  
-  
