@@ -1,7 +1,7 @@
-<h1>FirstGameProject</h1>
+<h1>My FirstGameProject</h1>
 
 <h2>Introduction</h2>
-  <p>You are a dark magician from SoftUni, who can shoot fire.Your goal is to kill bugs.Starting with 0 points.For each killed bug you got 5 points.</p>
+  <p>You are a dark magician, who can shoot fire.Your goal is to kill bugs.Starting with 0 points.For each killed bug you got 5 points.</p>
   <br>
   <p>Magican can move up/down/left/down with arrow's or keys: <br> keyW(up), keyS(down), keyA(left), keyD(right).<br> Also fire with key: Space </p>
   <p>Levels:</p>
