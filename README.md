@@ -1,7 +1,9 @@
 You are a dark magician from SoftUni, who can shoot fire. Your goal is to kill bugs. Starting with 0 points. For each killed bug, you get 5 points.
 
 ## DEMO
-<iframe width="560" height="315" src="https://www.youtube.com/embed/d1R0MaG43Zo?si=MzSbYL0FJQz-wc9h" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+[![Watch the video](https://img.youtube.com/vi/d1R0MaG43Zo/0.jpg)](https://www.youtube.com/watch?v=d1R0MaG43Zo)
+
 
 ### Controls
 
