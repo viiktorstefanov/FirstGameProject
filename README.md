@@ -1,6 +1,6 @@
 You are a dark magician who can shoot fire. The computer generates bugs randomly across the right plane of the board.Your goal is to kill or avoid bugs. Starting with 0 points. For each killed bug, you get 5 points.
 
-## DEMO
+## Demo
 
 [![Watch the video](https://img.youtube.com/vi/d1R0MaG43Zo/0.jpg)](https://www.youtube.com/watch?v=d1R0MaG43Zo)
 
